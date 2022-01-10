@@ -1,4 +1,4 @@
-//Assignment code here
+//Assignment code here --
 
 //define character sets
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -15,13 +15,30 @@ if (length < 8 || length > 128) {
   }
 
 else{
-let uppercaseuse = confirm("Would you like to use upper-case characters?");
-let lowercaseuse = confirm("Would you like to use lower-case characters?");
-let numberuse = confirm("Would you like to use numbers?");
-let specialuse = confirm("Would you like to use special characters?");
-let initialvalue = "";
+uppercaseuse = confirm("Would you like to use upper-case characters?");
+lowercaseuse = confirm("Would you like to use lower-case characters?");
+numberuse = confirm("Would you like to use numbers?");
+specialuse = confirm("Would you like to use special characters?");
+password = "";
 }
 
+//add values depending on confirms
+
+if (uppercaseuse) {
+password += uppercase
+}
+
+if (lowercaseuse) {
+  password += lowercase
+}
+
+if (numberuse) {
+  password += numbers
+}
+
+if (specialuse) {
+  password += special
+}
 
 //define generatePassword function
 function generatePassword () {

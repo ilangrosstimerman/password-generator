@@ -34,20 +34,24 @@ length = window.prompt("How many characters would you like to use between 8 and 
 //set parameters based on prompt and confirms
 
 if ((length >= 8) && (length <= 128)) {
-uppercaseuse = window.confirm("Would you like to use upper-case characters?");
-  if (uppercaseuse) {
+
+ var uppercaseuse = window.confirm("Would you like to use upper-case characters?"); 
+  if (uppercaseuse == true) {
    characters += uppercase;
     }
-lowercaseuse = window.confirm("Would you like to use lower-case characters?");
-  if (lowercaseuse) {
+  
+ var lowercaseuse = window.confirm("Would you like to use lower-case characters?"); 
+  if (lowercaseuse == true) {
    characters += lowercase;
-    }
-numberuse = window.confirm("Would you like to use numbers?");
-  if (numberuse) {
+  }
+  
+ var numberuse = window.confirm("Would you like to use numbers?"); 
+  if (numberuse == true) {
     characters += numbers;
     }
-specialuse = window.confirm("Would you like to use special characters?");
-  if (specialuse) {
+  
+ var specialuse = window.confirm("Would you like to use special characters?"); 
+  if (specialuse == true) {
     characters += special;
     }
 } 
@@ -56,7 +60,7 @@ specialuse = window.confirm("Would you like to use special characters?");
 
 else {
   alert("Password must be between 8 and 128 characters");
-  location.reload()
+
 }
 
 //specify running conditions for function generatePassword

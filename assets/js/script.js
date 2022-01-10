@@ -38,29 +38,29 @@ if ((length >= 8) && (length <= 128)) {
  var uppercaseuse = window.confirm("Would you like to use upper-case characters?"); 
   if (uppercaseuse == true) {
    characters += uppercase;
-    }
+    };
   
  var lowercaseuse = window.confirm("Would you like to use lower-case characters?"); 
   if (lowercaseuse == true) {
    characters += lowercase;
-  }
+  };
   
  var numberuse = window.confirm("Would you like to use numbers?"); 
   if (numberuse == true) {
     characters += numbers;
-    }
+    };
   
  var specialuse = window.confirm("Would you like to use special characters?"); 
   if (specialuse == true) {
     characters += special;
-    }
+    };
 } 
 
 //set action if number isn't within length parameters needed
 
 else {
   alert("Password must be between 8 and 128 characters");
-
+  location.reload();
 }
 
 //specify running conditions for function generatePassword
@@ -72,4 +72,5 @@ else {
 }
 
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
